@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Vui Do You Love Me</title>
+</head>
+<body onload="no()">
+<div style="padding-left: 200px; padding-top: 100px">
+    <h1>Do you love me ?</h1>
+    <button onclick="yes()">Yes</button>
+    <button style="margin-left: 50px; position:absolute;" id="no">No</button>
+</div>
+
+<script>
+    function yes() {
+        alert("<3");
+    }
+
+    function no() {
+        let n = document.getElementById("no");
+        n.addEventListener("mouseover", mouseOver);
+    }
+
+    function mouseOver() {
+        let r = Math.floor(Math.random() * 800) + 40;
+
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        console.log(w);
+        console.log(h);
+
+        document.getElementById("no").style.left = r + "px";
+        document.getElementById("no").style.top = r + "px";
+    }
+
+</script>
+</body>
+</html>
